@@ -1,11 +1,12 @@
 import React from 'react';
+import ContextProducts from "./Context/ContextProducts";
 
 
 const App = () => {
     return (
-        <div>
+        <ContextProducts>
 
-        </div>
+        </ContextProducts>
     );
 };
 
