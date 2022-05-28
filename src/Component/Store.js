@@ -10,7 +10,7 @@ const Store = () => {
 
     return (
         <div style={{display:"flex",flexFlow:"row Wrap",margin:"20px"}}>
-            {products.map( product => <StoreProducts key={product.id} data={product}/> )}
+            {products.map((product) => <StoreProducts key={product.id} data={product}/> )}
         </div>
     );
 };

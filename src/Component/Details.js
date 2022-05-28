@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
-
 // Context
-import {productsContext} from "../Context/ContextProducts";
+import { productsContext } from "../Context/ContextProducts";
 
 const Details = (props) => {
     const id = props.match.params.id;

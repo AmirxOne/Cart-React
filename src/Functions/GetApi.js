@@ -1,5 +1,4 @@
 import axios from "axios";
-
 //BASE API
 const BASE_API = "https://fakestoreapi.com"
 
