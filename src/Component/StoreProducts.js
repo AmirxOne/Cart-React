@@ -6,28 +6,35 @@ import {Link} from "react-router-dom";
 import {CartContext} from "../Context/ContextCart";
 // Function
 import {quantityCounter, isInProduct} from "../Functions/function";
+// Style
+import style from "../Component-style/StoreProducts.module.css"
 
 const StoreProducts = ({data}) => {
 
     const {state, dispatch} = useContext(CartContext)
 
     return (
-        <div style={{margin: "47px"}}>
-            <img style={{width: "200px"}} src={data.image} alt="image product"/>
-            <p>{ShortText(data.title)}</p>
-            <p>{data.category}</p>
-            <p>{data.price} $</p>
-            <div>
+        <div className={style.boxStoreProduct}>
+            <div className={style.boxImage}>
+                <img className={style.imageProduct} src={data.image} alt="image product"/>
+            </div>
+            <div className={style.titlePrice}>
+                <p className={style.title}>{ShortText(data.title)}</p>
+                <p className={style.price}>${data.price}</p>
+            </div>
+
+            <div className={style.boxDB}>
                 <Link to={`/Products/${data.id}`}>Details</Link>
-                <div>
+                <div className={style.But}>
                     {quantityCounter(state, data.id) > 1 &&
-                    <button onClick={() => dispatch({type: "NEGATIVE", payload: data})}> - </button>}
+                    <button className={style.BNeg} onClick={() => dispatch({type: "NEGATIVE", payload: data})}> </button>}
                     {quantityCounter(state, data.id) === 1 &&
-                    <button onClick={() => dispatch({type: "REMOVE_ITEM", payload: data})}> remove </button>}
+                    <button className={style.BRem} onClick={() => dispatch({type: "REMOVE_ITEM", payload: data})}> </button>}
+                    {quantityCounter(state, data.id) > 0 && <span>{quantityCounter(state, data.id)}</span>}
                     {
                         isInProduct(state, data.id) ?
-                            <button onClick={() => dispatch({type: "POSITIVE", payload: data})}> + </button> :
-                            <button onClick={() => dispatch({type: "ADD_ITEM", payload: data})}>Add to cart</button>
+                            <button className={style.BPos} onClick={() => dispatch({type: "POSITIVE", payload: data})}> </button> :
+                            <button className={style.BAdd} onClick={() => dispatch({type: "ADD_ITEM", payload: data})}>Add to cart</button>
                     }
                 </div>
             </div>

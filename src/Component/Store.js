@@ -3,13 +3,15 @@ import StoreProducts from "./StoreProducts";
 
 // Context
 import { productsContext } from "../Context/ContextProducts";
+// Style
+import style from "../Component-style/Store.module.css"
 
 const Store = () => {
 
     const products = useContext(productsContext)
 
     return (
-        <div style={{display:"flex",flexFlow:"row Wrap",margin:"20px"}}>
+        <div className={style.boxStore}>
             {products.map((product) => <StoreProducts key={product.id} data={product}/> )}
         </div>
     );

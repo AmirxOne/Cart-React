@@ -1,0 +1,13 @@
+@font-face {
+    font-family: IRANYekanThin;
+    src: url("../Font/IRANYekanThin.ttf")format("truetype");
+}
+@font-face {
+    font-family: IRANYekanRegular;
+    src: url("../Font/IRANYekanRegular.ttf")format("truetype");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

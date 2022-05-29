@@ -1,0 +1,116 @@
+.boxStoreProduct {
+    width: 300px;
+    height: 400px;
+    margin: 5px 5px;
+    border-radius: 8px;
+    border: 1px solid #09a198;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    padding: 15px 20px;
+    box-sizing: border-box;
+}
+
+.boxImage {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageProduct {
+    width: 140px;
+}
+
+.titlePrice {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: start;
+}
+
+.title {
+    font-family: IRANYekanThin, sans-serif;
+    width: 100%;
+    font-weight: bold;
+}
+
+.price {
+    width: 75px;
+    height: 30px;
+    background-color: #09a198;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    line-height: 28px;
+    margin: 0;
+}
+
+.boxDB {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 10px 0;
+    padding: 0 8px 0 13px;
+    box-sizing: border-box;
+}
+
+.boxDB > a {
+    text-decoration: none;
+}
+
+.But {
+    display: flex;
+    align-items: center;
+}
+
+.But > span {
+    display: flex;
+    width: 18px;
+    height: 18px;
+    justify-content: center;
+    align-items: center;
+    font-family: IRANYekanRegular, sans-serif;
+}
+
+.BAdd {
+    width: 90px;
+    height: 30px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    line-height: 30px;
+    background-color: #ffd814;
+    cursor: pointer;
+}
+
+.BAdd:hover {
+    filter: drop-shadow(0 0 10px #ffd814);
+    transition: all linear 0.3s;
+}
+
+.BRem, .BPos, .BNeg {
+    width: 30px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    margin-right: 5px;
+    background: url("../image/trash-bin.png") no-repeat center rgb(229, 229, 229);
+    cursor: pointer;
+}
+
+.BPos {
+    margin-left: 5px;
+    text-align: center;
+    background: url("../image/plus-positive-add-mathematical-symbol.png") no-repeat center rgb(229, 229, 229);
+}
+
+.BNeg {
+    margin-right: 5px;
+    background: url("../image/minus-sign.png") no-repeat center rgb(229, 229, 229);
+}
