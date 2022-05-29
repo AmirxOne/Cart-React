@@ -7,19 +7,19 @@ import Cart from "./Component/Cart";
 import ContextProducts from "./Context/ContextProducts";
 import ContextCart from "./Context/ContextCart";
 // react router dom
-import {Route, Switch, Redirect} from "react-router-dom";
+import {Route, Routes, Navigate} from "react-router-dom";
 
 const App = () => {
     return (
         <ContextProducts>
             <ContextCart>
                 <Navbar/>
-                <Switch>
-                    <Route path="/Products/:id" component={Details}/>
-                    <Route path="/Products" component={Store}/>
-                    <Route path="/Cart" component={Cart}/>
-                    <Redirect to="/Products"/>
-                </Switch>
+                <Routes>
+                    <Route path="/Products/:id" element={<Details/>}/>
+                    <Route path="/Products" element={<Store/>}/>
+                    <Route path="/Cart" element={<Cart/>}/>
+                    <Route path="/*" element={<Navigate to="/Products" />}/>
+                </Routes>
             </ContextCart>
         </ContextProducts>
     );

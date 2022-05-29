@@ -12,10 +12,17 @@ const Cart = () => {
         <div>
             {state.selectItem.map(product => <CartProducts key={product.id} cartData={product}/>)}
             <div>
-                <p> The total number of products : {state.itemCounter} </p>
-                <p> The total price of the products : {state.total} $ </p>
-                <button onClick={() => dispatch({type: "CLEAR"})}>clear</button>
-                <button onClick={() => dispatch({type: "CHECK_OUT"})}>check out</button>
+
+                {
+                    state.itemCounter > 0 &&
+                    <>
+                        <p> The total number of products : {state.itemCounter} </p>
+                        <p> The total price of the products : {state.total} $ </p>
+                        <button onClick={() => dispatch({type: "CLEAR"})}>clear</button>
+                        <button onClick={() => dispatch({type: "CHECK_OUT"})}>check out</button>
+                    </>
+                }
+
 
                 {
                     !state.itemCounter && !state.checkOut && <div>

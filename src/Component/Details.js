@@ -2,9 +2,12 @@ import React, {useState, useEffect} from 'react';
 import {BASE_API} from "../Functions/GetApi";
 // axios
 import axios from "axios";
+// react-router-dom
+import { useParams } from "react-router-dom";
 
-const Details = (props) => {
-    const id = props.match.params.id;
+const Details = () => {
+    const params = useParams();
+    const id = params.id;
     const [crop, setCrop] = useState([])
     const getCrop = async () => {
         const result = await axios.get(`${BASE_API}/products/${id}`)
