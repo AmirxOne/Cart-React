@@ -1,5 +1,5 @@
 .boxStoreProduct {
-    width: 300px;
+    width: 240px;
     height: 400px;
     margin: 5px 5px;
     border-radius: 8px;
@@ -45,7 +45,7 @@
     color: white;
     text-align: center;
     line-height: 28px;
-    margin: 0;
+    margin-top: 15px;
 }
 
 .boxDB {
@@ -55,12 +55,13 @@
     justify-content: space-between;
     align-items: center;
     margin: 10px 0 10px 0;
-    padding: 0 8px 0 13px;
+    padding: 0 0 0 12px;
     box-sizing: border-box;
 }
 
 .boxDB > a {
     text-decoration: none;
+    color: black;
 }
 
 .But {
@@ -72,13 +73,14 @@
     display: flex;
     width: 18px;
     height: 18px;
+    font-size: 0.9rem;
     justify-content: center;
     align-items: center;
     font-family: IRANYekanRegular, sans-serif;
 }
 
 .BAdd {
-    width: 90px;
+    width: 85px;
     height: 30px;
     border-radius: 25px;
     outline: none;
@@ -99,18 +101,18 @@
     outline: none;
     border: none;
     border-radius: 25px;
-    margin-right: 5px;
-    background: url("../image/trash-bin.png") no-repeat center rgb(229, 229, 229);
+    margin-right: 2px;
+    background: url("../image/trash-bin.png") no-repeat center #ffd814;
     cursor: pointer;
 }
 
 .BPos {
-    margin-left: 5px;
+    margin-left: 2px;
     text-align: center;
-    background: url("../image/plus-positive-add-mathematical-symbol.png") no-repeat center rgb(229, 229, 229);
+    background: url("../image/plus-positive-add-mathematical-symbol.png") no-repeat center #ffd814;
 }
 
 .BNeg {
-    margin-right: 5px;
-    background: url("../image/minus-sign.png") no-repeat center rgb(229, 229, 229);
+    margin-right: 2px;
+    background: url("../image/minus-sign.png") no-repeat center #ffd814;
 }

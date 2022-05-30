@@ -14,10 +14,10 @@
 }
 .boxNavbar > a {
     text-decoration: none;
-    font-family: IRANYekanRegular,sans-serif;
+    font-family: IRANYekanThin,sans-serif;
     color:#09a198;
     font-size: 1.3rem;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 .boxNavbar > a > div {
     width: 40px;

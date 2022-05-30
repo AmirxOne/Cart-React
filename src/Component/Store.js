@@ -5,15 +5,26 @@ import StoreProducts from "./StoreProducts";
 import { productsContext } from "../Context/ContextProducts";
 // Style
 import style from "../Component-style/Store.module.css"
+// image
+import lodGif from "../image/Gif/Ripple-1s-200px (1).gif"
 
 const Store = () => {
 
     const products = useContext(productsContext)
 
     return (
-        <div className={style.boxStore}>
-            {products.map((product) => <StoreProducts key={product.id} data={product}/> )}
-        </div>
+        <>
+        {
+            products.length !== 0 ?
+                <div className={style.boxStore}>
+                    {products.map((product) => <StoreProducts key={product.id} data={product}/> )}
+                </div> :
+                <div className={style.boxLoading}><img src={lodGif} alt=""/></div>
+
+
+        }
+        </>
+
     );
 };
 

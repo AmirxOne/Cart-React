@@ -3,7 +3,9 @@ import {BASE_API} from "../Functions/GetApi";
 // axios
 import axios from "axios";
 // react-router-dom
-import { useParams } from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
+import style from "../Component-style/Details.module.css";
+import lodGif from "../image/Gif/Ripple-1s-200px (1).gif";
 
 const Details = () => {
     const params = useParams();
@@ -23,20 +25,28 @@ const Details = () => {
     }, [])
 
     return (
-
-        <div>
+        <div className={style.boxDetails}>
             {
                 crop.length !== 0 ?
-                    <div style={{margin: "20px"}}>
-                        <img style={{width: "200px"}} src={crop.image} alt="image product"/>
-                        <p>{crop.title}</p>
-                        <p>{crop.description}</p>
-                        <span>{crop.price} $</span>
-                    </div> :
-                    <div><p>loading ...</p></div>
+                    <div className={style.Details}>
+                        <div className={style.boxImage}>
+                            <img src={crop.image} alt="image product"/>
+                        </div>
+                        <div className={style.boxDescription}>
+                            <p className={style.title}>{crop.title}</p>
+                            <p className={style.dis}>{crop.description}</p>
+                            <p className={style.dis}>Category : <span>{crop.category}</span></p>
+                            <div>
+                                <span className={style.price}>${crop.price}</span>
+                                <Link to="/Products"><span className={style.Back}>Back to Shop</span></Link>
+                            </div>
+
+                        </div>
+                    </div>
+                    :
+                    <div className={style.boxLoading}><img src={lodGif} alt=""/></div>
             }
         </div>
-
     );
 };
 
