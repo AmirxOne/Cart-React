@@ -1,6 +1,5 @@
 import React, {useReducer, createContext} from 'react';
 
-
 const initialState = {
     selectItem: [],
     itemCounter: 0,
@@ -9,8 +8,8 @@ const initialState = {
 }
 
 const Calculations = (item) => {
-    const itemCounter = item.reduce((total, product) => total + product.quantity ,0)
-    const total = item.reduce((total, product) => total + product.price * product.quantity ,0).toFixed(2)
+    const itemCounter = item.reduce((total, product) => total + product.quantity, 0)
+    const total = item.reduce((total, product) => total + product.price * product.quantity, 0).toFixed(2)
     return {itemCounter, total}
 }
 
@@ -21,24 +20,24 @@ const cartReducer = (state, action) => {
                 state.selectItem.push({...action.payload, quantity: 1})
             }
             return {
-                ...state, selectItem: [...state.selectItem],...Calculations(state.selectItem),checkOut: false
+                ...state, selectItem: [...state.selectItem], ...Calculations(state.selectItem), checkOut: false
             }
         case "REMOVE_ITEM":
             const newSelectItem = state.selectItem.filter(item => item.id !== action.payload.id)
             return {
-                ...state, selectItem: [...newSelectItem],...Calculations(newSelectItem)
+                ...state, selectItem: [...newSelectItem], ...Calculations(newSelectItem)
             }
         case "POSITIVE":
             const Positive = state.selectItem.findIndex(item => item.id === action.payload.id)
             state.selectItem[Positive].quantity++;
             return {
-                ...state,...Calculations(state.selectItem)
+                ...state, ...Calculations(state.selectItem)
             }
         case "NEGATIVE":
             const Negative = state.selectItem.findIndex(item => item.id === action.payload.id)
             state.selectItem[Negative].quantity--;
             return {
-                ...state,...Calculations(state.selectItem)
+                ...state, ...Calculations(state.selectItem)
             }
         case "CHECK_OUT":
             return {

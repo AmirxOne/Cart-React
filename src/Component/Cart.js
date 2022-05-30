@@ -24,8 +24,8 @@ const Cart = () => {
                             <p> The total number of products : <span>{state.itemCounter}</span></p>
                             <p> The total price of the products : <span>${state.total}</span></p>
                             <div className={style.divBut}>
-                            <button onClick={() => dispatch({type: "CLEAR"})}>Clear</button>
-                            <button onClick={() => dispatch({type: "CHECK_OUT"})}>Check Out</button>
+                                <button onClick={() => dispatch({type: "CLEAR"})}>Clear</button>
+                                <button onClick={() => dispatch({type: "CHECK_OUT"})}>Check Out</button>
                             </div>
                         </>
                     }

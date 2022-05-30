@@ -4,9 +4,10 @@
     flex-flow: row Wrap;
     justify-content: center;
     align-items: center;
-    margin:70px 20px 20px 20px;
+    margin: 70px 20px 20px 20px;
     padding: 0 100px 0 123px;
 }
+
 .boxLoading {
     width: 100%;
     height: calc(100vh - 70px);
@@ -15,12 +16,14 @@
     justify-content: center;
 
 }
+
 .boxLoading > img {
     transform: scale(0.2);
     margin-bottom: 90px;
 }
+
 @media (max-width: 2000px) {
-    .boxStore{
+    .boxStore {
         padding: 0 100px 0 100px;
     }
 }

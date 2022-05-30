@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import React, {useContext} from 'react';
 // react-router-dom
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 // Context
 import {CartContext} from "../Context/ContextCart";
 // Style
@@ -12,8 +12,10 @@ const Navbar = () => {
 
     return (
         <div className={style.boxNavbar}>
-            <Link to="/Products" >Amir.X.One</Link>
-            <Link to="/Cart"><div>{state.itemCounter ? <span>{state.itemCounter}</span> : ""}</div></Link>
+            <Link to="/Products">Amir.X.One</Link>
+            <Link to="/Cart">
+                <div>{state.itemCounter ? <span>{state.itemCounter}</span> : ""}</div>
+            </Link>
         </div>
     );
 };

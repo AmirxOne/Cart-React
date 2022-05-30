@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
+import React, {useContext} from 'react';
 import StoreProducts from "./StoreProducts";
-
 // Context
-import { productsContext } from "../Context/ContextProducts";
+import {productsContext} from "../Context/ContextProducts";
 // Style
 import style from "../Component-style/Store.module.css"
 // image
@@ -14,17 +13,14 @@ const Store = () => {
 
     return (
         <>
-        {
-            products.length !== 0 ?
-                <div className={style.boxStore}>
-                    {products.map((product) => <StoreProducts key={product.id} data={product}/> )}
-                </div> :
-                <div className={style.boxLoading}><img src={lodGif} alt=""/></div>
-
-
-        }
+            {
+                products.length !== 0 ?
+                    <div className={style.boxStore}>
+                        {products.map((product) => <StoreProducts key={product.id} data={product}/>)}
+                    </div> :
+                    <div className={style.boxLoading}><img src={lodGif} alt=""/></div>
+            }
         </>
-
     );
 };
 

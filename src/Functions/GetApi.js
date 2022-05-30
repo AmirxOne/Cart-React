@@ -7,4 +7,4 @@ const getApi = async () => {
     return result.data
 }
 
-export { getApi }
+export {getApi}

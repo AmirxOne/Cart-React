@@ -1,7 +1,8 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
 }
+
 .boxLoading {
     width: 100%;
     height: calc(100vh - 70px);
@@ -10,18 +11,21 @@
     justify-content: center;
 
 }
+
 .boxLoading > img {
     transform: scale(0.2);
     margin-bottom: 90px;
 }
-.boxDetails{
+
+.boxDetails {
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.Details{
+
+.Details {
     width: 1000px;
     height: 400px;
     border: 1px solid #09a198;
@@ -30,7 +34,8 @@
     align-items: center;
     justify-content: center;
 }
-.boxImage{
+
+.boxImage {
     width: 60%;
     height: 100%;
     padding: 20px;
@@ -38,28 +43,34 @@
     justify-content: center;
     align-items: center;
 }
-.boxImage > img{
+
+.boxImage > img {
     width: 210px;
 }
-.boxDescription{
+
+.boxDescription {
     width: 100%;
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
     padding: 80px 40px 80px 0;
-    font-family: IRANYekanThin,sans-serif;
+    font-family: IRANYekanThin, sans-serif;
 }
-.title{
+
+.title {
     font-weight: bold;
     font-size: 1.1rem;
 }
-.dis{
+
+.dis {
     margin-top: 30px;
 }
-.dis > span{
-color: #ffd300
+
+.dis > span {
+    color: #ffd300
 }
-.boxDescription > div{
+
+.boxDescription > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,22 +78,24 @@ color: #ffd300
     margin-top: 60px;
 }
 
-.price{
+.price {
     width: 80px;
     height: 30px;
     background-color: #09a198;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius:8px;
+    border-radius: 8px;
     color: white;
 
 }
-a{
+
+a {
     text-decoration: none;
     color: black;
 }
-.Back{
+
+.Back {
     width: 120px;
     height: 35px;
     border-radius: 25px;
@@ -92,32 +105,39 @@ a{
     justify-content: center;
     align-items: center;
 }
-.Back:hover{
+
+.Back:hover {
     filter: drop-shadow(0 0 8px #ffd814);
     transition: all linear .2s;
 }
+
 @media (max-width: 1030px) {
-    .Details{
+    .Details {
         width: 500px;
         height: 700px;
         flex-flow: column nowrap;
     }
-    .boxImage{
+
+    .boxImage {
         width: 100%;
         height: 50%;
         padding: 60px 20px 20px 20px;
     }
-    .boxImage > img{
+
+    .boxImage > img {
         width: 200px;
     }
-    .boxDescription{
+
+    .boxDescription {
         height: 50%;
         padding: 50px 20px 10px 20px;
     }
-    .dis{
+
+    .dis {
         margin-top: 20px;
     }
-    .boxDescription > div{
+
+    .boxDescription > div {
         display: flex;
         justify-content: space-between;
         align-items: center;

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { getApi } from "../Functions/GetApi";
+import React, {useState, useEffect} from 'react';
+import {getApi} from "../Functions/GetApi";
 // Creat Context
 export const productsContext = React.createContext();
 
@@ -13,7 +13,7 @@ const ContextProducts = (props) => {
         }
 
         fetchApi()
-    },[])
+    }, [])
 
     return (
         <productsContext.Provider value={products}>
