@@ -1,0 +1,74 @@
+.BoxCart {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 70px);
+    margin-top: 70px;
+}
+
+.CartProducts {
+    width: 50%;
+}
+
+.boxAllTotall {
+    width: 350px;
+    height: 200px;
+}
+
+.boxTotal {
+    width: 350px;
+    height: 198px;
+    border-radius: 8px;
+    border: 1px solid #09a198;
+    font-family: IRANYekanThin, sans-serif;
+    padding: 35px 20px;
+    position: fixed;
+    top: 70px;
+    right: 150px;
+    margin-left: 15px;
+}
+
+.boxTotal span {
+    color: #09a198;
+}
+
+.boxTotal p {
+    margin-bottom: 15px;
+}
+
+.divBut {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.divBut button {
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    background-color: #ffd814;
+    height: 30px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.divBut button:nth-child(1) {
+    background-color: crimson;
+    color: white;
+}
+/*@media (max-width: 1350px) {*/
+/*    .boxProduct {*/
+/*        width: 50%;*/
+/*        height: 200px;*/
+/*        display: flex;*/
+/*        flex-flow: column nowrap;*/
+/*        align-items: center;*/
+/*        border-radius: 8px;*/
+/*        border: 1px solid #09a198;*/
+/*        margin-bottom: 15px;*/
+/*    }*/
+/*}*/

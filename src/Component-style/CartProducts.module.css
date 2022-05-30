@@ -1,0 +1,142 @@
+.boxProduct {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid #09a198;
+    margin-bottom: 15px;
+}
+
+.boxImage {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxImage > img {
+    width: 100px;
+}
+
+.titlePrice {
+    width: 35%;
+    height: 100%;
+    font-family: IRANYekanThin, sans-serif;
+    padding: 60px 20px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.price {
+    width: 70px;
+    height: 25px;
+    border-radius: 8px;
+    background-color: #09a198;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.boxQuntity {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxQuntity > span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    line-height: 27px;
+    background-color: #09a198;
+}
+
+.boxButton {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxButton > .neg {
+    outline: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    margin-right: 5px;
+    cursor: pointer;
+    background: url("../image/minus-sign.png") no-repeat center #ffd814;
+}
+
+.boxButton > .pos {
+    outline: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    margin-left: 5px;
+    cursor: pointer;
+    background: url("../image/plus-positive-add-mathematical-symbol.png") no-repeat center #ffd814;
+}
+
+.boxButton > .rem {
+    outline: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    margin-right: 5px;
+    cursor: pointer;
+    background: url("../image/trash-bin.png") no-repeat center #ffd814;
+}
+@media (max-width: 1350px) {
+    .boxProduct {
+        width: 80%;
+        height: 400px;
+        flex-flow: column nowrap;
+    }
+    .boxImage {
+        width: 100%;
+        height: 35%;
+        margin-top: 50px;
+    }
+    .titlePrice {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 30px;
+        align-items: center;
+    }
+
+    .price {
+        margin-top: 0;
+    }
+    .boxQuntity {
+        width: 100%;
+        height: 30px;
+        margin-top: 15px;
+    }
+}
+@media (max-width: 950px) {
+    .boxProduct {
+        width: 70%;
+        height: 400px;
+        flex-flow: column nowrap;
+    }
+}
