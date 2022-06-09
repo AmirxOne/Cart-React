@@ -5,7 +5,7 @@ import {productsContext} from "../Context/ContextProducts";
 // Style
 import style from "../Component-style/Store.module.css"
 // image
-import lodGif from "../image/Gif/Ripple-1s-200px (1).gif"
+import lodGif from "../image/Gif/loading.gif"
 
 const Store = () => {
 

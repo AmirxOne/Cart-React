@@ -5,7 +5,7 @@ import axios from "axios";
 // react-router-dom
 import {Link, useParams} from "react-router-dom";
 import style from "../Component-style/Details.module.css";
-import lodGif from "../image/Gif/Ripple-1s-200px (1).gif";
+import lodGif from "../image/Gif/loading.gif";
 
 const Details = () => {
     const params = useParams();
