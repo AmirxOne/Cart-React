@@ -44,7 +44,7 @@ const Details = () => {
                         </div>
                     </div>
                     :
-                    <div className={style.boxLoading}><img src={lodGif} alt=""/></div>
+                    <div className={style.boxLoading}><img src={lodGif} alt="loading"/></div>
             }
         </div>
     );
