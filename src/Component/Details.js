@@ -5,7 +5,7 @@ import axios from "axios";
 // react-router-dom
 import {Link, useParams} from "react-router-dom";
 import style from "../Component-style/Details.module.css";
-import lodGif from "../image/Gif/loading.gif";
+// import lodGif from "../image/Gif/loading.gif";
 
 const Details = () => {
     const params = useParams();
@@ -44,7 +44,10 @@ const Details = () => {
                         </div>
                     </div>
                     :
-                    <div className={style.boxLoading}><img src={lodGif} alt="loading"/></div>
+                    <div className={style.boxLoading}>
+                        {/*<img src={lodGif} alt="loading"/>*/}
+                        <h1>loading ...</h1>
+                    </div>
             }
         </div>
     );
