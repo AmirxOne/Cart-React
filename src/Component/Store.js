@@ -5,7 +5,7 @@ import {productsContext} from "../Context/ContextProducts";
 // Style
 import style from "../Component-style/Store.module.css"
 // image
-// import lodGif from "../image/Gif/loading.gif"
+import lodGif from "../image/Gif/loading.gif"
 
 const Store = () => {
 
@@ -19,8 +19,7 @@ const Store = () => {
                         {products.map((product) => <StoreProducts key={product.id} data={product}/>)}
                     </div> :
                     <div className={style.boxLoading}>
-                        {/*<img src={lodGif} alt=""/>*/}
-                        <h1>loading ...</h1>
+                        <img src={lodGif} alt=""/>
                     </div>
             }
         </>
